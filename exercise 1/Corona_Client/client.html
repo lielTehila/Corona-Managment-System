@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Management System</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="client.css">
+    <script src="client.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Corona Management System of the Clinic</h1>
+
+        <button id="addMember">Add Member</button>
+        <h2>The clinic members:</h2>
+        <ul id="members-list">
+            <!-- Member details will be dynamically added here -->
+        </ul>
+        <!-- Container to display member details -->
+        <div id="member-details-container" class="hidden"></div>
+    </div>  
+    <form id="formMember" class="hidden" onsubmit="return validateForm()"> 
+        <label for="id">ID: </label>
+        <input id="id" type="text" name="id" pattern= "[0-9]{9}" required><br>
+    
+        <label for="fullname">FULL NAME: </label>
+        <input id="fullname" type="text" name="Fullname" pattern="[a-z A-Z]{20}" required><br>
+    
+        <label for="address">ADDRESS: </label>
+        <input id="address" type="text" name="Address" pattern="[^,]+,[^,]+,[0-9,]+" required><br>
+    
+        <label for="dateOfBirth">DATE OF BIRTH: </label>
+        <input id="dateOfBirth" type="date" name="DateOfBirth"required><br>
+    
+        <label for="telephone">TELEPHONE: </label>
+        <input id="telephone" type="text" name="Telephone" pattern="0[0-9]{8}" required><br>
+
+        <label for="mobilePhone">MOBILE PHONE: </label>
+        <input id="mobilePhone" type="text" name="VobilePhone" pattern="05[0-9]{8}" title="Mobile phone number should start with 05 and have 10 digits" required><br>
+                
+        <label for="vaccine1Date">VACCINE 1 DATE: </label>
+        <input id="vaccine1Date" type="date" name="Vaccine1Date"><br>
+    
+        <label for="vaccine1Manufacturer">VACCINE 1 MANUFACTURER: </label>
+        <select id="vaccine1Manufacturer" name="Vaccine1Manufacturer" >
+            <!-- <option value="NONE" selected>NONE</option> -->
+            <option value="MODERNA">Moderna</option>
+            <option value="PFIZER">Pfizer</option>
+        </select><br>    
+        
+        <label for="vaccine2Date">VACCINE 2 DATE: </label>
+        <input id="vaccine2Date" type="date" name="Vaccine2Date"><br>
+    
+        <label for="vaccine2Manufacturer">VACCINE 2 MANUFACTURER: </label>
+        <select id="vaccine2Manufacturer" name="Vaccine2Manufacturer" >
+            <!-- <option value="NONE" selected>NONE</option> -->
+            <option value="MODERNA">Moderna</option>
+            <option value="PFIZER">Pfizer</option>
+        </select><br>  
+
+        <label for="vaccine3Date">VACCINE 3 DATE: </label>
+        <input id="vaccine3Date" type="date"name="Vaccine3Date"><br>
+    
+        <label for="vaccine3Manufacturer">VACCINE 3 MANUFACTURER: </label>
+        <select id="vaccine3Manufacturer" name="Vaccine3Manufacturer" >
+            <!-- <option value="NONE" selected>NONE</option> -->
+            <option value="MODERNA">Moderna</option>
+            <option value="PFIZER">Pfizer</option>
+        </select><br>  
+
+        <label for="vaccine4Date">VACCINE 4 DATE: </label>
+        <input id="vaccine4Date" type="date" name="Vaccine4Date"><br>
+    
+        <label for="vaccine4Manufacturer">VACCINE 4 MANUFACTURER: </label>
+        <select id="vaccine4Manufacturer" name="Vaccine4Manufacturer" >
+            <!-- <option value="NONE" selected>NONE</option> -->
+            <option value="MODERNA">Moderna</option>
+            <option value="PFIZER">Pfizer</option>
+        </select><br>  
+
+        <label for="positiveResultDate">POSITIVE RESULT DATE: </label>
+        <input id="positiveResultDate" type="date"  name="PositiveResultDate"><br>
+    
+        <label for="recoveryDate">RECOVERY DATE: </label>
+        <input id="recoveryDate" type="date"  name="RecoveryDate"><br>
+    </form>
+    
+    
+</body>
+</html>
