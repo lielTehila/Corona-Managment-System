@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 void Rec(int w, int h) {
@@ -49,7 +50,9 @@ void printTri(int w, int h) {
 }
 
 int calculateScope(int w, int h) {
-	return 0;
+    double side = sqrt(pow(w / 2, 2) + pow(h, 2));
+    double perimeter = 2 * side + width;
+    return perimeter;
 }
 
 
@@ -64,7 +67,7 @@ void main() {
 	while (code != 3){
 		cout << "enter width and height\n";
 		cin >> width >> height;
-		// מובטח קלט תקין, לכן אין בדיקת תקינות
+		
 		switch (code) {
 			case 1: 
 				Rec(width,height);
